@@ -1,0 +1,28 @@
+import { Canvas, Meta } from '@storybook/blocks';
+ 
+import * as OptionsStories from './Options.stories';
+ 
+<Meta of={OptionsStories} />
+ 
+# Option Buttons
+ 
+List of question options that rendered as Buttons.
+
+# Definition
+
+This component is created to check questions answer. A container named options
+that contains 4 buttons as each option for questions. After click on a answer,
+the right answer will be shown with blue theme color , wrong answers will get
+yellow color and buttons gets disabled.
+
+# Unanswered Form
+
+<Canvas of={OptionsStories.Unanswered} />
+
+# Answered: Correct
+
+<Canvas of={OptionsStories.AnsweredCorrectly} />
+
+# Answered: Wrong
+
+<Canvas of={OptionsStories.AnsweredIncorrectly} />
