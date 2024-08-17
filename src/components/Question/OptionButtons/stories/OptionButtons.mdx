@@ -1,6 +1,7 @@
-import { Canvas, Meta } from '@storybook/blocks';
- 
-import * as OptionsStories from './Options.stories';
+import { Canvas, Meta, Controls } from '@storybook/blocks';
+import { PureArgsTable } from '@storybook/addon-docs';
+
+import * as OptionsStories from './OptionButtons.stories';
  
 <Meta of={OptionsStories} />
  
@@ -8,21 +9,23 @@ import * as OptionsStories from './Options.stories';
  
 List of question options that rendered as Buttons.
 
-# Definition
+## Definition
 
 This component is created to check questions answer. A container named options
 that contains 4 buttons as each option for questions. After click on a answer,
 the right answer will be shown with blue theme color , wrong answers will get
 yellow color and buttons gets disabled.
 
-# Unanswered Form
+### Unanswered: Default
 
 <Canvas of={OptionsStories.Unanswered} />
+> You can edit values of controllers blow to see how Option Buttons work !
+<Controls />
 
-# Answered: Correct
+### Answered: Correct
 
 <Canvas of={OptionsStories.AnsweredCorrectly} />
 
-# Answered: Wrong
+### Answered: Incorrect
 
 <Canvas of={OptionsStories.AnsweredIncorrectly} />

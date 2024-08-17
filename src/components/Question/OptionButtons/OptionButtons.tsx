@@ -1,5 +1,5 @@
 import { Dispatch } from 'react';
-import { Actions } from '../@Types';
+import { Actions } from '../../../@Types';
 
 interface IProps {
   dispatch: Dispatch<Actions>;
@@ -7,7 +7,7 @@ interface IProps {
   correctOption: number;
   answer: null | number;
 }
-function Options({ options, correctOption, dispatch, answer }: IProps) {
+function OptionButtons({ options, correctOption, dispatch, answer }: IProps) {
   function onSelectAnswer(index: number) {
     dispatch({ type: 'newAnswer', payload: index });
   }
@@ -30,4 +30,4 @@ function Options({ options, correctOption, dispatch, answer }: IProps) {
   );
 }
 
-export default Options;
+export { OptionButtons };

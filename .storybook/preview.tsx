@@ -1,46 +1,32 @@
-import React from 'react';
 import { themes } from '@storybook/theming';
 import type { Preview } from '@storybook/react';
-import {
-  Title,
-  Subtitle,
-  Description,
-  Primary,
-  Controls,
-  Stories,
-} from '@storybook/blocks';
+import '../src/index.css';
 
 const preview: Preview = {
   parameters: {
-    controls: {
-      matchers: {
-        color: /(background|color)$/i,
-        date: /Date$/,
-      },
+    darkMode: {
+      dark: { ...themes.dark },
+      light: { ...themes.light },
+      current: 'dark',
     },
+
     docs: {
-      page: () => (
-        <>
-          <Title />
-          <Subtitle />
-          <Description />
-          <Primary />
-          <Controls />
-          <Stories />
-        </>
-      ),
+      theme: themes.dark,
+    },
+
+    options: {
+      storySort: {
+        order: ['Components', ['Question', ['OptionButtons']]],
+      },
+
+      controls: {
+        matchers: {
+          color: /(background|color)$/i,
+          date: /Date$/,
+        },
+      },
     },
   },
 };
 
 export default preview;
-
-export const parameters = {
-  darkMode: {
-    // Override the default dark theme
-    dark: { ...themes.dark, appBg: 'black' },
-    // Override the default light theme
-    light: { ...themes.normal, appBg: 'red' },
-    current: 'dark',
-  },
-};

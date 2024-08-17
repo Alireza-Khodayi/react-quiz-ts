@@ -1,0 +1,31 @@
+import { Canvas, Meta, Controls } from '@storybook/blocks';
+import { PureArgsTable } from '@storybook/addon-docs';
+import * as QuestionStories from './Question.stories';
+
+<Meta of={QuestionStories} />
+
+# Question
+
+A simple component to show question title and answer options.
+
+## Definition
+
+This component will show the question title and answer options. After users
+select an option correct answer will shown as blue and all others will turn to
+orange color.
+
+### Unanswered: Default
+
+<Canvas of={QuestionStories.Unanswered} />
+
+> You can edit values of controllers blow to see how Question component work !
+
+<Controls />
+
+### Answered: Correct
+
+<Canvas of={QuestionStories.AnsweredCorrectly} />
+
+### Answered: Incorrect
+
+<Canvas of={QuestionStories.AnsweredIncorrectly} />

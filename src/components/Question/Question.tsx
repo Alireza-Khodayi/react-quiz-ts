@@ -1,6 +1,6 @@
 import { Dispatch } from 'react';
-import { Actions, IQuestion } from '../@Types';
-import Options from './Options';
+import { Actions, IQuestion } from '../../@Types';
+import { OptionButtons } from './OptionButtons';
 
 interface IProps {
   question: IQuestion;
@@ -12,7 +12,7 @@ function Question({ question, dispatch, answer }: IProps) {
   return (
     <div>
       <h4>{question.question}</h4>
-      <Options
+      <OptionButtons
         key={title}
         correctOption={correctOption}
         options={options}
@@ -23,4 +23,4 @@ function Question({ question, dispatch, answer }: IProps) {
   );
 }
 
-export default Question;
+export { Question };

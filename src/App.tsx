@@ -5,7 +5,7 @@ import { Actions, IQuestion, State } from './@Types';
 import Loader from './components/Loader';
 import ErrorComponent from './components/ErrorComponent';
 import StartScreen from './components/StartScreen';
-import Question from './components/Question';
+import { Question } from './components/Question';
 
 const initialState: State = {
   questions: [],
