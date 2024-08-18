@@ -8,8 +8,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "server": "json-server --watch data/questions.json --port 8000",
-    "storybook": "storybook dev -p 6006",
+    "server": "json-server --watch data/questions.json --port 3000",
+    "storybook": "storybook dev -p 6006 --no-open",
     "build-storybook": "storybook build"
   },
   "dependencies": {
@@ -19,8 +19,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
-    "@babel/preset-env": "^7.25.3",
-    "@babel/preset-react": "^7.24.7",
     "@chromatic-com/storybook": "^1.6.1",
     "@storybook/addon-docs": "^8.2.9",
     "@storybook/addon-essentials": "^8.2.9",
@@ -43,8 +41,10 @@
     "eslint-plugin-react-refresh": "^0.4.7",
     "eslint-plugin-storybook": "^0.8.0",
     "storybook": "^8.2.9",
-    "storybook-dark-mode": "^4.0.2",
     "typescript": "^5.2.2",
-    "vite": "^5.3.1"
+    "vite": "^5.4.1"
+  },
+  "resolutions": {
+    "rollup": "npm:@rollup/wasm-node"
   }
 }

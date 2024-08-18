@@ -50,7 +50,7 @@ function App() {
   useEffect(function () {
     async function fetchQuestions() {
       try {
-        const res = await fetch('http://localhost:8000/questions');
+        const res = await fetch('http://localhost:3000/questions');
         const data: IQuestion[] = await res.json();
         dispatch({ type: 'dataReceived', payload: data });
       } catch (err) {
