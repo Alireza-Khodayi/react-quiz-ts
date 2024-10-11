@@ -10,6 +10,7 @@ export interface State {
   index: number;
   answer: null | number;
   points: number;
+  highscore: number;
 }
 
 export interface Actions {
