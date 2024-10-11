@@ -11,9 +11,11 @@ export interface State {
   answer: null | number;
   points: number;
   highscore: number;
+  secondsRemaining: null | number;
 }
 
 export interface Actions {
   type: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   payload?: any;
 }
